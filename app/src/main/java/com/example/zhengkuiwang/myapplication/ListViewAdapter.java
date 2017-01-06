@@ -17,6 +17,7 @@ import java.util.Map;
 
 /**
  * Created by zhengkuiwang on 16/11/23. 能行吗
+ * 还是有点搞不懂
  */
 
 public class ListViewAdapter extends BaseAdapter {
