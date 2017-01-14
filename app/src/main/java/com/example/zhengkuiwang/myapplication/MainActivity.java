@@ -1,5 +1,5 @@
 package com.example.zhengkuiwang.myapplication;
-//测试
+//测试2
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
