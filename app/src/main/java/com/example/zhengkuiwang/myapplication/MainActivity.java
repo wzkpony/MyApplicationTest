@@ -8,9 +8,17 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Switch;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
+
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
 
 public class MainActivity extends AppCompatActivity {
     private ListView listView;
@@ -43,7 +51,43 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
     }
+
+    //GET  Request
+    /*
+         Request是OkHttp中访问的请求，Builder是辅助类。Response即OkHttp中的响应。
+     */
+    String getRequest(String urlString) throws IOException {
+        OkHttpClient httpClient = new OkHttpClient();
+        Request request = new Request.Builder().url(urlString).build();
+        Response response = httpClient.newCall(request).execute();
+        if (response.isSuccessful()) {
+            return response.body().string();
+        } else {
+            throw new IOException("Unexpected code " + response);
+        }
+    }
+
+    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+    String postRequest(String url, String json) throws IOException {
+
+        OkHttpClient client = new OkHttpClient();
+        RequestBody body = RequestBody.create(JSON, json);
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+        Response response = client.newCall(request).execute();
+        if (response.isSuccessful()) {
+            return response.body().string();
+        } else {
+            throw new IOException("Unexpected code " + response);
+        }
+    }
+
     private ArrayList<HashMap<String,Object>> dataForMe()
     {
         ArrayList<HashMap<String,Object>> list = new ArrayList<HashMap<String,Object>>();

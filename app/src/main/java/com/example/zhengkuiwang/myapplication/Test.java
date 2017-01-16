@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 /**
@@ -28,7 +29,7 @@ public class Test extends Activity {
         textView.setText("欢迎 "+name+" 到来"+"您的IP是:\n\n"+"\t\t"+IP);
 
 
-        Button buttonBack = (Button)findViewById(R.id.buttonBackPublicBar);
+        ImageButton buttonBack = (ImageButton)findViewById(R.id.buttonBackPublicBar);
         buttonBack.setOnClickListener(new buttonClickListrner());
     }
     protected class buttonClickListrner implements View.OnClickListener
