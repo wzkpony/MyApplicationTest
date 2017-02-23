@@ -10,6 +10,12 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Map;
 
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
 /**
  * Created by zhengkuiwang on 16/12/7.
  */
@@ -94,4 +100,39 @@ public class RequestClass {
         resultData = new String(byteArrayOutputStream.toByteArray());
         return resultData;
     }
+
+
+    //GET  Request
+    /*
+         Request是OkHttp中访问的请求，Builder是辅助类。Response即OkHttp中的响应。
+     */
+    public static String getRequest(String urlString) throws IOException {
+        OkHttpClient httpClient = new OkHttpClient();
+        Request request = new Request.Builder().url(urlString).build();
+        Response response = httpClient.newCall(request).execute();
+        if (response.isSuccessful()) {
+            return response.body().string();
+        } else {
+            throw new IOException("Unexpected code " + response);
+        }
+    }
+
+    //POST  Request
+    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+    public static String postRequest(String url, String json) throws IOException {
+
+        OkHttpClient client = new OkHttpClient();
+        RequestBody body = RequestBody.create(JSON, json);
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+        Response response = client.newCall(request).execute();
+        if (response.isSuccessful()) {
+            return response.body().string();
+        } else {
+            throw new IOException("Unexpected code " + response);
+        }
+    }
+
 }
