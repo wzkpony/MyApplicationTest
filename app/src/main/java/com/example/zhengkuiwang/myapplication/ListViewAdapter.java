@@ -13,11 +13,9 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
- * Created by zhengkuiwang on 16/11/23. 能行吗
- * 还是有点搞不懂
+ * Created by zhengkuiwang on 16/11/23.
  */
 
 public class ListViewAdapter extends BaseAdapter {
@@ -57,7 +55,7 @@ public class ListViewAdapter extends BaseAdapter {
         {
             holder = new ViewHolder();
             LayoutInflater  mLayoutInflater = LayoutInflater.from(context);
-            convertView = mLayoutInflater.inflate(R.layout.user,null);
+            convertView = mLayoutInflater.inflate(R.layout.user_cell,null);
             holder.textViewName = (TextView) convertView.findViewById(R.id.user_name);
             holder.textViewIP = (TextView) convertView.findViewById(R.id.user_ip);
             convertView.setTag(holder);
@@ -114,7 +112,7 @@ public class ListViewAdapter extends BaseAdapter {
             }
             String name = (String) list.get(position).get("userName");
             String IP = (String) list.get(position).get("userIp");
-            Intent intent = new Intent(context, Test.class);
+            Intent intent = new Intent(context, IPDetailsActivity.class);
             intent.putExtra("Name",name);
             intent.putExtra("IP",IP);
             context.startActivity(intent);

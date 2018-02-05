@@ -9,4 +9,7 @@
     <color name="colorRed">#FF0000</color>
     <color name="colorWhite">#FFFAFA</color>
     <color name="clearColor">#00FFFFFF</color>
+
+    <color name="ghostwhite">#F8F8FF</color>
+
 </resources>

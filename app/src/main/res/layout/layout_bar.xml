@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:background="@color/colorAD"
+              android:background="@color/colorAccent"
               android:layout_width="match_parent"
-              android:layout_height="56dp"
+              android:layout_height="22pt"
               android:orientation="horizontal">
         <ImageButton
-            android:id="@+id/buttonBackPublicBar"
+            android:id="@+id/imageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/image"
-            android:padding="10dp"
+            android:padding="2pt"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/image"
             android:background="@color/clearColor"/>
 
         <TextView
@@ -17,7 +18,7 @@
             android:textColor="@color/colorWhite"
             android:text="首页"
             android:gravity="center"
-            android:textSize="13pt"
+            android:textSize="21sp"
             android:layout_weight="2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
@@ -27,10 +28,10 @@
             android:id="@+id/Title"
             android:textColor="@color/colorWhite"
             android:text="注销"
-            android:paddingRight="10dp"
+            android:padding="2pt"
             android:gravity="center"
             android:layout_gravity="right"
-            android:textSize="13pt"
+            android:textSize="21sp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
 

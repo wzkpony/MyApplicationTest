@@ -35,8 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         listView = (ListView) findViewById(R.id.listID);
-//        lisetAdapter = new SimpleAdapter(this,list,R.layout.user,new String[]{"userName","userIp"},new int[]{R.id.user_name,R.id.user_ip});
-//        listView.setAdapter(lisetAdapter);
+
         adapter = new ListViewAdapter(this,list);
         listView.setAdapter(adapter);
 

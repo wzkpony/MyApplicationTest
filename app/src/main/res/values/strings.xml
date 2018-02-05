@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">王正魁练习</string>
     <string name="switchText">开关</string>
+    <string name="title_activity_login2">Login2Activity</string>
+
+
+    <string name="logo">OA系统</string>
+    <string name="login">登录</string>
+    <string name="nameText">姓名</string>
+    <string name="pwdText">密码</string>
+    <string name="register">注册</string>
+    <string name="phone">手机号码</string>
 </resources>

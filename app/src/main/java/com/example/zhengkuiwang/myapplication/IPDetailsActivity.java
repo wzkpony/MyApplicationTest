@@ -13,11 +13,11 @@ import android.widget.TextView;
  * Created by zhengkuiwang on 16/11/29.
  */
 
-public class Test extends Activity {
+public class IPDetailsActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout);
+        setContentView(R.layout.activity_ipdetails);
 //        Button layout_weight = (Button)findViewById(R.id.buttonBack);
 //        layout_weight.setOnClickListener(new buttonClickListrner());
 
@@ -29,7 +29,7 @@ public class Test extends Activity {
         textView.setText("欢迎 "+name+" 到来"+"您的IP是:\n\n"+"\t\t"+IP);
 
 
-        ImageButton buttonBack = (ImageButton)findViewById(R.id.buttonBackPublicBar);
+        Button buttonBack = (Button)findViewById(R.id.buttonBack);
         buttonBack.setOnClickListener(new buttonClickListrner());
     }
     protected class buttonClickListrner implements View.OnClickListener

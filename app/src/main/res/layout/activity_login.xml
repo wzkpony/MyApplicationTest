@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="44pt" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="22pt"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/logo"
+            android:textSize="@dimen/TitleSize"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:background="@color/ghostwhite"
+        android:layout_marginTop="10pt">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="30pt"
+            android:layout_height="match_parent"
+            android:background="@color/clearColor"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/colorAccent"
+            android:text="@string/nameText"
+            android:textSize="@dimen/textViewSize" />
+
+        <LinearLayout
+            android:layout_width="1pt"
+            android:layout_height="10pt"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorAccent">
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/clearColor"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/textViewSize"/><!--android:gravity="center"-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:background="@color/ghostwhite"
+        android:layout_marginTop="10pt">
+
+
+        <TextView
+            android:id="@+id/textViewPwd"
+            android:layout_width="30pt"
+            android:layout_height="match_parent"
+            android:background="@color/clearColor"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/colorAccent"
+            android:text="@string/pwdText"
+            android:textSize="@dimen/textViewSize" />
+
+        <LinearLayout
+            android:layout_width="1pt"
+            android:layout_height="10pt"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorAccent">
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/editTextPwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/clearColor"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/textViewSize"
+
+            /><!--android:gravity="center"-->
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/doLogin"
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:text="@string/login"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorAccent"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginTop="60pt"/>
+
+</LinearLayout>
+
+
+
+
+
+
+
+    <!--
+        第一个线性布局, 我们可以视为html中的div,用于对于整个界面进行布局
+        这里面 xmlns:android和xmlns:tools指定的是xml文件的命名空间,不是对布局的主要设置
+        但是要有
+        android:layout_width="match_parent"指的是当前的线性布局宽度占整个父元素，这里相对于
+        当前的线性布局父元素为当前的窗体,所以宽度占满窗体
+        android:layout_height="match_parent"指的是当前的线性布局高度占整个父元素，这里相对于
+        当前的线性布局父元素为当前的窗体,所以高度占满窗体
+        tools:context="com.example.activitylife.MainActivity":用于指定渲染上下文
+        android:orientation="vertical":指的是当前控件为垂直摆，horizontal水平摆放
+    -->
+    <!--
+           第二个线性布局,这里我们放置在大的线性布局中,作为子布局使用,设置背景颜色为蓝色
+           这里面android:layout_width="match_parent"指的是宽度占满父元素LinearLayout的宽度
+               android:layout_height="100dp"高度占100dp
+               android:background="@android:color/holo_blue_bright"设置背景色
+               android:gravity="center"中心居中是对view控件本身来说的，是用来设置view本身的内容应该显示在view的什么位置，
+               默认值是左侧。
+       -->
+    <!--
+           第三个线性布局,这里我们放置在大的线性布局中,作为子布局使用,设置背景颜色为绿色
+           这里面android:layout_width="match_parent"指的是宽度占满父元素LinearLayout的宽度
+               android:layout_height="200dp"高度占200dp
+               android:background="@android:color/holo_green_light"设置背景色
+        -->
